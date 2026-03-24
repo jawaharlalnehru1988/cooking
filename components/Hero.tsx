@@ -14,7 +14,7 @@ export default function Hero() {
             Divine Flavors
           </span>
           <h1 className="text-5xl md:text-7xl font-serif mb-6 leading-tight">
-            Cooking as an Act of Devotion
+            Sattiv Cooking: Pure Devotion
           </h1>
           <p className="text-lg md:text-xl mb-8 opacity-90 leading-relaxed">
             Discover the ancient art of Sattvic cooking. Transform your kitchen into a sacred

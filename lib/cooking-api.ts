@@ -6,6 +6,7 @@ export interface CookingArticle {
   slug: string;
   language: string;
   created_at: string;
+  order?: number;
 }
 
 export interface PaginatedResponse<T> {
@@ -23,6 +24,7 @@ export interface FetchArticlesParams {
   language?: string;
   search?: string;
   ordering?: string;
+  order?: number;
 }
 
 const BASE_URL = "https://api.askharekrishna.com/api/v1/cooking/articles/";
@@ -40,6 +42,7 @@ export async function fetchCookingArticles(params: FetchArticlesParams = {}): Pr
   if (params.language) url.searchParams.append("language", params.language);
   if (params.search) url.searchParams.append("search", params.search);
   if (params.ordering) url.searchParams.append("ordering", params.ordering);
+  if (params.order) url.searchParams.append("order", params.order.toString());
 
   const res = await fetch(url.toString(), {
     next: { revalidate: 60 }, // Cache for 60 seconds

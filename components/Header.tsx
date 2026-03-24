@@ -33,7 +33,7 @@ export default function Header() {
             <span className="text-white text-xl">ॐ</span>
           </div>
           <span className="text-2xl font-serif font-bold text-forest-green tracking-tight">
-            Ananda Rasa
+            Sattiv Cooking
           </span>
         </Link>
 
