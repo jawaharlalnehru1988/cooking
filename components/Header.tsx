@@ -12,6 +12,7 @@ export default function Header() {
     { name: "Home", href: "/" },
     { name: "Recipes", href: "/recipes" },
     { name: "Principles", href: "/principles" },
+    { name: "Why Veg?", href: "/why-veg" },
     { name: "Ingredients", href: "/ingredients" },
     { name: "About", href: "/about" },
   ];
