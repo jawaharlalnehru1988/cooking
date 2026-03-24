@@ -10,6 +10,37 @@ Typical staples include **rice, dal, vegetables, ghee, milk products, grains, fr
 Below is a **structured taxonomy of 200 sattvik food items** organized for a cooking knowledge base.
 
 ---
+# Krishna Conscious Principles for Cooking
+
+1. **Ahimsa**: Non-violence in every food choice.
+2. **Sattvic Diet**: Choosing foods that promote health, longevity, and peace.
+3. **The Spirit of Devotion**: Cooking as an act of Bhakti (love).
+4. **Offering to the Lord**: The transformation of food into *Prasadam* (mercy).
+5. **Cleanliness of the Chef**: External and internal purity before entering the kitchen.
+6. **Kitchen Sanctity**: Treating the cooking area as a sacred altar.
+7. **Avoiding Onion and Garlic**: Eliminating ingredients that agitate the mind.
+8. **The Role of Ghee**: Using clarified butter for spiritual and physical vitalization.
+9. **Mindful Cooking**: Keeping a meditative focus on the Lord's pleasure.
+10. **No Tasting While Cooking**: Ensuring the first portion is reserved for the Divine.
+11. **Fresh and Seasonal Produce**: Choosing ingredients at their peak of life energy.
+12. **Pure Water Selection**: Recognizing water as the essence of life and purity.
+13. **Compassion as an Ingredient**: Infusing every dish with the heart of mercy.
+14. **The Three Gunas**: Understanding how food affects the modes of material nature.
+15. **Fasting and Holy Days**: Spiritual discipline through dietary regulation (e.g., Ekadashi).
+16. **Nourishing Grains**: Using wholesome grains to sustain body and spirit.
+17. **Fruits and Flowers**: Offering nature's simplest gifts with a pure heart.
+18. **Avoiding Intoxicants**: Stepping away from caffeine, alcohol, and harmful substances.
+19. **Simplicity in Living**: Favoring high thinking over complex, prideful dishes.
+20. **Ayurvedic Balance**: Harmonizing the six tastes for optimal health.
+21. **Environmental Stewardship**: Sustainable and ethical sourcing of ingredients.
+22. **Sound Vibration**: Chanting and devotional music in the cooking space.
+23. **Service to Humanity**: The joy of feeding guests and the community.
+24. **Genetic Integrity**: Avoiding GMO and highly processed modern foods.
+25. **Gratitude and Prayer**: Acknowledging the source of all sustenance.
+26. **Mercy Distribution**: The importance of sharing *Prasadam* with everyone.
+27. **Universal Brotherhood**: Respecting all *jivas* (living entities) through diet.
+28. **Consistency in Devotion**: Making every daily meal a spiritual offering.
+
 
 # 1. Variety Rice Items (25)
 
