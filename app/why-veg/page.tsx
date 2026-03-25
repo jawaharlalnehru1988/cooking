@@ -11,13 +11,17 @@ export default async function WhyVegPage() {
     ordering: "order" // Sort by the order field we added during migration
   });
 
-  const topics = response.results.map(article => ({
-    id: article.id,
-    order: article.order || 0, // Fallback if order isn't present
-    title: article.subTopic,
-    // Extract description from the first paragraph of the article or use fixed fallback
-    description: article.article.split("\n").find(line => line.length > 50 && !line.startsWith("#"))?.slice(0, 150) + "..."
-  })).sort((a, b) => (a.order as number) - (b.order as number));
+  const topics = response.results.map(article => {
+    const firstParagraph = article.article.split("\n").find(line => line.trim().length > 40 && !line.startsWith("#"));
+    return {
+      id: article.id,
+      order: article.order || 0,
+      title: article.subTopic,
+      description: firstParagraph 
+        ? firstParagraph.slice(0, 150) + "..." 
+        : "Deep dive into the scriptural and scientific reasons for a compassionate lifestyle."
+    };
+  }).sort((a, b) => (a.order) - (b.order));
 
   return (
     <div className="bg-white min-h-screen text-gray-800 font-sans">
@@ -40,7 +44,7 @@ export default async function WhyVegPage() {
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {topics.map((t) => (
             <Link 
-              key={t.order} 
+              key={`${t.id}-${t.order}`} 
               href={`/why-veg/${t.order}`}
               className="bg-spiritual-cream p-8 rounded-[2rem] border border-transparent hover:border-forest-green/20 hover:shadow-2xl transition-all group block"
             >

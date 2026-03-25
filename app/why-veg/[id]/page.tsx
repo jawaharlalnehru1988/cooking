@@ -18,11 +18,12 @@ export default async function WhyVegDetailPage({ params }: { params: Promise<{ i
 
   const allArticles = response.results.sort((a, b) => (a.order || 0) - (b.order || 0));
   const currentIndex = allArticles.findIndex(a => (a.order === currentOrder));
-  const currentArticle = allArticles[currentIndex];
-
-  if (!currentArticle) {
+  
+  if (currentIndex === -1) {
     notFound();
   }
+  
+  const currentArticle = allArticles[currentIndex];
 
   const prev = currentIndex > 0 ? allArticles[currentIndex - 1] : null;
   const next = currentIndex < allArticles.length - 1 ? allArticles[currentIndex + 1] : null;
