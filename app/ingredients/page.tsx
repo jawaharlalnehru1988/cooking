@@ -102,20 +102,20 @@ const ingredientTaxonomy = [
 
 export default function IngredientsPage() {
   return (
-    <div className="bg-spiritual-cream min-h-screen text-gray-800 font-sans">
+    <div className="bg-spiritual-cream dark:bg-gray-950 min-h-screen text-gray-800 dark:text-gray-200 font-sans transition-colors">
       <Header />
       
       <main className="container mx-auto px-6 py-16">
         {/* Page Header */}
         <header className="mb-20 text-center">
-          <span className="text-forest-green font-bold tracking-[0.3em] uppercase text-xs mb-4 block">
+          <span className="text-forest-green dark:text-forest-green font-bold tracking-[0.3em] uppercase text-xs mb-4 block">
             The Sattvic Pantry
           </span>
           <h1 className="text-4xl md:text-5xl font-serif text-deep-saffron mb-6">
             Ingredient Taxonomy
           </h1>
           <div className="w-24 h-1 bg-forest-green mx-auto mb-8"></div>
-          <p className="text-gray-600 max-w-2xl mx-auto text-lg leading-relaxed">
+          <p className="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto text-lg leading-relaxed">
             A comprehensive guide to the pure, life-affirming ingredients that form the foundation of a Krishna Conscious kitchen.
           </p>
         </header>
@@ -123,7 +123,7 @@ export default function IngredientsPage() {
         {/* Taxonomy Grid */}
         <div className="space-y-16">
           {ingredientTaxonomy.map((category, idx) => (
-            <section key={idx} className="bg-white rounded-[3rem] shadow-sm border border-orange-100 overflow-hidden">
+            <section key={idx} className="bg-white dark:bg-gray-900 rounded-[3rem] shadow-sm border border-orange-100 dark:border-gray-800 overflow-hidden transition-colors">
               <div className="grid md:grid-cols-3">
                 {/* Category Info */}
                 <div className="bg-deep-saffron p-10 md:p-12 text-white flex flex-col justify-center">
@@ -138,11 +138,11 @@ export default function IngredientsPage() {
                 <div className="md:col-span-2 p-10 md:p-16">
                   <div className="grid sm:grid-cols-2 gap-x-12 gap-y-8">
                     {category.items.map((item, i) => (
-                      <div key={i} className="group border-b border-orange-50 pb-4">
-                        <h3 className="text-lg font-bold text-forest-green group-hover:text-deep-saffron transition-colors mb-1">
+                      <div key={i} className="group border-b border-orange-50 dark:border-gray-800 pb-4">
+                        <h3 className="text-lg font-bold text-forest-green dark:text-forest-green group-hover:text-deep-saffron transition-colors mb-1">
                           {item.name}
                         </h3>
-                        <p className="text-gray-500 text-sm leading-relaxed">
+                        <p className="text-gray-500 dark:text-gray-400 text-sm leading-relaxed">
                           {item.detail}
                         </p>
                       </div>

@@ -20,9 +20,11 @@ export interface FetchArticlesParams {
   page?: number;
   pageSize?: number;
   mainTopic?: string;
+  category?: string; // New filter
   id?: number | string;
   language?: string;
   search?: string;
+  query?: string; // Explicit text query
   ordering?: string;
   order?: number;
 }
@@ -37,10 +39,12 @@ export async function fetchCookingArticles(params: FetchArticlesParams = {}): Pr
   
   if (params.page) url.searchParams.append("page", params.page.toString());
   if (params.pageSize) url.searchParams.append("page_size", params.pageSize.toString());
+  if (params.category) url.searchParams.append("category", params.category);
   if (params.mainTopic) url.searchParams.append("mainTopic", params.mainTopic);
   if (params.id) url.searchParams.append("id", params.id.toString());
   if (params.language) url.searchParams.append("language", params.language);
   if (params.search) url.searchParams.append("search", params.search);
+  if (params.query) url.searchParams.append("query", params.query);
   if (params.ordering) url.searchParams.append("ordering", params.ordering);
   if (params.order) url.searchParams.append("order", params.order.toString());
 
@@ -108,4 +112,45 @@ export async function fetchCookingArticleById(id: number | string): Promise<Cook
   }
 
   return res.json();
+}
+
+/**
+ * Fetches the list of distinct categories (mainTopics).
+ * Includes a fallback to manual extraction if the dedicated endpoint is unavailable (e.g. 404).
+ */
+export async function fetchCookingCategories(): Promise<{ categories: string[] }> {
+  try {
+    const categoriesUrl = `${BASE_URL}categories/`;
+    const res = await fetch(categoriesUrl, {
+      next: { revalidate: 3600 },
+    });
+
+    if (res.ok) {
+      return res.json();
+    }
+
+    if (res.status === 404) {
+      console.warn("Categories endpoint not found (404). Falling back to manual extraction...");
+      // Fallback: Fetch the first page of articles to discover active categories
+      // We use a larger page size to get a good sample of categories
+      const articlesRes = await fetch(`${BASE_URL}?page_size=100`, {
+        next: { revalidate: 3600 },
+      });
+      
+      if (articlesRes.ok) {
+        const data = await articlesRes.json();
+        const results = Array.isArray(data) ? data : data.results || [];
+        const categories = Array.from(new Set(results.map((r: any) => r.mainTopic)))
+          .filter(Boolean)
+          .sort() as string[];
+        return { categories };
+      }
+    }
+
+    console.error("Fetch categories failed:", res.status);
+    return { categories: [] };
+  } catch (error) {
+    console.error("Error in fetchCookingCategories:", error);
+    return { categories: [] };
+  }
 }

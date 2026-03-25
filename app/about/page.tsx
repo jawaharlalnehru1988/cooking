@@ -24,7 +24,7 @@ export default async function AboutPage() {
   const otherSites = await getOtherSites();
 
   return (
-    <div className="bg-spiritual-cream min-h-screen text-gray-800 font-sans">
+    <div className="bg-spiritual-cream dark:bg-gray-950 min-h-screen text-gray-800 dark:text-gray-200 font-sans transition-colors">
       <Header />
       
       <main className="container mx-auto px-6 py-16">
@@ -37,7 +37,7 @@ export default async function AboutPage() {
             Nourishing the Soul through Sattiv Cooking
           </h1>
           <div className="w-24 h-1 bg-forest-green mx-auto mb-10"></div>
-          <p className="text-xl text-gray-600 leading-relaxed mb-8">
+          <p className="text-xl text-gray-600 dark:text-gray-400 leading-relaxed mb-8">
             Sattiv Cooking is more than just a recipe platform. It is a humble attempt to share the 
             ancient wisdom of Krishna Conscious culinary arts, where every ingredient is selected 
             with compassion and every meal is prepared as a divine offering.
@@ -46,19 +46,19 @@ export default async function AboutPage() {
 
         <div className="grid lg:grid-cols-2 gap-16 items-start max-w-6xl mx-auto">
           {/* Founder Section */}
-          <section className="bg-white p-10 md:p-16 rounded-[4rem] shadow-sm border border-orange-100">
+          <section className="bg-white dark:bg-gray-900 p-10 md:p-16 rounded-[4rem] shadow-sm border border-orange-100 dark:border-gray-800">
             <h2 className="text-3xl font-serif text-forest-green mb-8">Meet the Founder</h2>
             <div className="flex items-center space-x-6 mb-8">
-              <div className="w-24 h-24 bg-spiritual-cream rounded-full flex items-center justify-center text-3xl">
+              <div className="w-24 h-24 bg-spiritual-cream dark:bg-gray-800 rounded-full flex items-center justify-center text-3xl">
                 🙏
               </div>
               <div>
-                <h3 className="text-2xl font-bold text-gray-900">Narasimha dasa</h3>
+                <h3 className="text-2xl font-bold text-gray-900 dark:text-white">Narasimha dasa</h3>
                 <p className="text-deep-saffron font-medium">Devotee & Culinary Guide</p>
               </div>
             </div>
             
-            <p className="text-gray-600 leading-relaxed mb-10">
+            <p className="text-gray-600 dark:text-gray-400 leading-relaxed mb-10">
               Dedicated to spreading the bliss of Sattvik lifestyle, Narasimha dasa 
               curates this collection of Krishna Conscious principles and recipes to help 
               seekers transform their relationship with food and spirituality.
@@ -66,13 +66,13 @@ export default async function AboutPage() {
 
             <div className="space-y-6">
               <div className="flex items-start space-x-4">
-                <div className="w-10 h-10 rounded-full bg-forest-green/10 flex items-center justify-center text-forest-green shrink-0">
+                <div className="w-10 h-10 rounded-full bg-forest-green/10 dark:bg-forest-green/20 flex items-center justify-center text-forest-green shrink-0">
                   <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
                   </svg>
                 </div>
                 <div>
-                  <p className="text-xs font-bold text-gray-400 uppercase tracking-widest mb-1">Direct Contact</p>
+                  <p className="text-xs font-bold text-gray-400 dark:text-gray-500 uppercase tracking-widest mb-1">Direct Contact</p>
                   <a href="tel:+916382043976" className="text-lg font-bold text-forest-green hover:text-deep-saffron transition-colors">
                     +91 6382043976
                   </a>
@@ -105,16 +105,16 @@ export default async function AboutPage() {
                   href={site.webUrl} 
                   target="_blank" 
                   rel="noopener noreferrer"
-                  className="bg-spiritual-cream p-8 rounded-[2rem] border border-transparent hover:border-vedic-gold/30 hover:bg-white hover:shadow-xl transition-all group block"
+                  className="bg-spiritual-cream dark:bg-gray-900 p-8 rounded-[2rem] border border-transparent dark:border-gray-800 hover:border-vedic-gold/30 dark:hover:border-vedic-gold/30 hover:bg-white dark:hover:bg-gray-800 hover:shadow-xl transition-all group block"
                 >
                   <div className="flex justify-between items-center">
                     <div>
-                      <h3 className="text-xl font-bold text-gray-800 group-hover:text-deep-saffron transition-colors">
+                      <h3 className="text-xl font-bold text-gray-800 dark:text-gray-100 group-hover:text-deep-saffron transition-colors">
                         {site.name}
                       </h3>
-                      <p className="text-gray-500 text-sm mt-1">{site.webUrl.replace('https://', '')}</p>
+                      <p className="text-gray-500 dark:text-gray-400 text-sm mt-1">{site.webUrl.replace('https://', '')}</p>
                     </div>
-                    <div className="w-10 h-10 rounded-full bg-white flex items-center justify-center text-vedic-gold group-hover:bg-deep-saffron group-hover:text-white transition-all">
+                    <div className="w-10 h-10 rounded-full bg-white dark:bg-gray-800 flex items-center justify-center text-vedic-gold group-hover:bg-deep-saffron group-hover:text-white transition-all">
                       <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
                       </svg>

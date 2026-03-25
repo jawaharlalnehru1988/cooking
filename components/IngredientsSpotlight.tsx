@@ -1,11 +1,11 @@
 export default function IngredientsSpotlight() {
   return (
-    <section className="py-24 bg-forest-green text-white overflow-hidden">
+    <section className="py-24 bg-forest-green text-white transition-colors overflow-hidden">
       <div className="container mx-auto px-6">
         <div className="flex flex-col md:flex-row items-center gap-16">
           <div className="md:w-1/2">
-            <h2 className="text-4xl font-serif mb-6">Purity Starts with Ingredients</h2>
-            <p className="text-lg opacity-80 mb-8 leading-relaxed">
+            <h2 className="text-4xl font-serif mb-6 text-white">Purity Starts with Ingredients</h2>
+            <p className="text-lg opacity-80 mb-8 leading-relaxed text-white">
               In Vedic cooking, we choose ingredients in the mode of goodness (Sattva). Fresh
               organic vegetables, whole grains, pure A2 ghee, and fragrant spices are the foundation
               of every meal.

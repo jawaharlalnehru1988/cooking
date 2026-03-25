@@ -29,12 +29,12 @@ export default async function WhyVegDetailPage({ params }: { params: Promise<{ i
   const next = currentIndex < allArticles.length - 1 ? allArticles[currentIndex + 1] : null;
 
   return (
-    <div className="bg-spiritual-cream min-h-screen text-gray-800 font-sans pb-20">
+    <div className="bg-spiritual-cream dark:bg-gray-950 min-h-screen text-primary font-sans pb-20 transition-colors">
       <Header />
       <main className="container mx-auto px-6 py-12 max-w-4xl">
         <Link 
           href="/why-veg" 
-          className="inline-flex items-center text-forest-green hover:text-deep-saffron transition-colors mb-8 font-semibold group"
+          className="inline-flex items-center text-forest-green dark:text-forest-green hover:text-deep-saffron transition-colors mb-8 font-semibold group"
         >
           <svg className="w-5 h-5 mr-2 group-hover:-translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 19l-7-7m0 0l7-7m-7 7h18" />
@@ -42,7 +42,7 @@ export default async function WhyVegDetailPage({ params }: { params: Promise<{ i
           Back to Why Veg?
         </Link>
 
-        <article className="bg-white rounded-[3rem] shadow-xl overflow-hidden border border-gray-100 mb-12">
+        <article className="bg-card-bg rounded-[3rem] shadow-xl overflow-hidden border border-gray-100 dark:border-gray-800 mb-12 transition-colors">
           <div className="bg-deep-saffron text-white p-12 md:p-20 text-center relative overflow-hidden">
             <div className="absolute top-0 right-0 w-64 h-64 bg-white/5 rounded-full -translate-y-1/2 translate-x-1/2"></div>
             <span className="text-white/80 font-bold tracking-[0.4em] uppercase text-xs mb-4 block relative z-10">
@@ -53,11 +53,10 @@ export default async function WhyVegDetailPage({ params }: { params: Promise<{ i
             </h1>
           </div>
 
-          <div className="p-8 md:p-20 bg-white">
-            <div className="prose prose-lg prose-forest max-w-none 
-              prose-headings:font-serif prose-headings:text-forest-green 
+          <div className="p-8 md:p-20 bg-card-bg transition-colors">
+            <div className="prose prose-lg max-w-none 
+              prose-headings:font-serif prose-headings:text-forest-green
               prose-h1:text-center prose-h1:mb-12
-              prose-h3:text-deep-saffron prose-h3:border-b prose-h3:border-vedic-gold/20 prose-h3:pb-2
               prose-strong:text-forest-green prose-strong:font-bold
               prose-li:marker:text-deep-saffron
             ">
@@ -71,15 +70,15 @@ export default async function WhyVegDetailPage({ params }: { params: Promise<{ i
           {prev ? (
             <Link 
               href={`/why-veg/${prev.order}`}
-              className="p-8 bg-white rounded-3xl border border-gray-100 shadow-sm hover:shadow-xl hover:border-deep-saffron/30 transition-all group flex flex-col"
+              className="p-8 bg-card-bg rounded-3xl border border-gray-100 dark:border-gray-800 shadow-sm hover:shadow-xl hover:border-deep-saffron/30 transition-all group flex flex-col"
             >
-              <span className="text-xs font-bold text-gray-400 uppercase tracking-widest mb-2 flex items-center">
+              <span className="text-xs font-bold text-muted uppercase tracking-widest mb-2 flex items-center">
                 <svg className="w-4 h-4 mr-2 group-hover:-translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M15 19l-7-7 7-7" />
                 </svg>
                 Previous
               </span>
-              <h4 className="text-xl font-serif text-forest-green group-hover:text-deep-saffron transition-colors">
+              <h4 className="text-xl font-serif text-forest-green dark:text-forest-green group-hover:text-deep-saffron transition-colors">
                 {prev.subTopic}
               </h4>
             </Link>
@@ -88,15 +87,15 @@ export default async function WhyVegDetailPage({ params }: { params: Promise<{ i
           {next ? (
             <Link 
               href={`/why-veg/${next.order}`}
-              className="p-8 bg-white rounded-3xl border border-gray-100 shadow-sm hover:shadow-xl hover:border-deep-saffron/30 transition-all group flex flex-col text-right items-end"
+              className="p-8 bg-card-bg rounded-3xl border border-gray-100 dark:border-gray-800 shadow-sm hover:shadow-xl hover:border-deep-saffron/30 transition-all group flex flex-col text-right items-end"
             >
-              <span className="text-xs font-bold text-gray-400 uppercase tracking-widest mb-2 flex items-center">
+              <span className="text-xs font-bold text-muted uppercase tracking-widest mb-2 flex items-center">
                 Next
                 <svg className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M9 5l7 7-7 7" />
                 </svg>
               </span>
-              <h4 className="text-xl font-serif text-forest-green group-hover:text-deep-saffron transition-colors">
+              <h4 className="text-xl font-serif text-forest-green dark:text-forest-green group-hover:text-deep-saffron transition-colors">
                 {next.subTopic}
               </h4>
             </Link>

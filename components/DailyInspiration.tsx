@@ -10,7 +10,7 @@ export default function DailyInspiration() {
             "If one offers Me with love and devotion a leaf, a flower, fruit or water, I will accept
             it."
           </blockquote>
-          <cite className="text-gray-500 font-medium">— Bhagavad Gita 9.26</cite>
+          <cite className="text-muted font-medium">— Bhagavad Gita 9.26</cite>
         </div>
       </div>
     </section>

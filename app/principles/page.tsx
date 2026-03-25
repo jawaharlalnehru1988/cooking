@@ -188,7 +188,7 @@ export default function PrinciplesPage() {
   ];
 
   return (
-    <div className="bg-spiritual-cream min-h-screen text-gray-800 font-sans relative">
+    <div className="bg-spiritual-cream dark:bg-gray-950 min-h-screen text-gray-800 dark:text-gray-200 font-sans relative transition-colors">
       <Header />
       
       <main className="container mx-auto px-6 py-16">
@@ -196,11 +196,11 @@ export default function PrinciplesPage() {
           <span className="text-deep-saffron font-bold tracking-[0.3em] uppercase text-xs mb-4 block">
             Vedic Wisdom
           </span>
-          <h1 className="text-4xl md:text-5xl font-serif text-forest-green mb-6">
+          <h1 className="text-4xl md:text-5xl font-serif text-forest-green dark:text-forest-green mb-6">
             Krishna Conscious Principles for Cooking
           </h1>
           <div className="w-24 h-1 bg-deep-saffron mx-auto mb-8"></div>
-          <p className="text-gray-600 max-w-2xl mx-auto text-lg leading-relaxed italic">
+          <p className="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto text-lg leading-relaxed italic">
             "Purity in the kitchen leads to purity of the heart. Every act of cooking is an act of devotion, transforming simple ingredients into spiritual mercy."
           </p>
         </header>
@@ -210,17 +210,17 @@ export default function PrinciplesPage() {
             <Link 
               key={p.id} 
               href={`/principles/${p.id}`}
-              className="bg-white p-8 rounded-3xl shadow-sm border border-gray-50 hover:shadow-xl hover:border-deep-saffron/20 transition-all group cursor-pointer active:scale-95 transform block"
+              className="bg-card-bg p-8 rounded-3xl shadow-sm border border-gray-50 dark:border-gray-800 hover:shadow-xl hover:border-deep-saffron/20 transition-all group cursor-pointer active:scale-95 transform block"
             >
               <div className="flex items-start gap-4">
-                <div className="w-12 h-12 rounded-2xl bg-spiritual-cream flex items-center justify-center text-2xl shrink-0 group-hover:bg-deep-saffron group-hover:text-white transition-all">
+                <div className="w-12 h-12 rounded-2xl bg-spiritual-cream dark:bg-gray-800 flex items-center justify-center text-2xl shrink-0 group-hover:bg-deep-saffron group-hover:text-white transition-all">
                   {p.icon}
                 </div>
                 <div>
-                  <h2 className="text-xl font-bold text-forest-green mb-2 group-hover:text-deep-saffron transition-colors">
+                  <h2 className="text-xl font-bold text-forest-green dark:text-forest-green mb-2 group-hover:text-deep-saffron transition-colors">
                     {p.title}
                   </h2>
-                  <p className="text-gray-500 leading-relaxed text-sm line-clamp-2">
+                  <p className="text-gray-500 dark:text-gray-400 leading-relaxed text-sm line-clamp-2">
                     {p.description}
                   </p>
                   <div className="mt-4 flex items-center text-xs font-bold text-deep-saffron uppercase tracking-widest opacity-0 group-hover:opacity-100 transition-opacity">
@@ -232,13 +232,13 @@ export default function PrinciplesPage() {
           ))}
         </div>
 
-        <section className="mt-24 p-12 bg-forest-green rounded-[3rem] text-white text-center relative overflow-hidden shadow-2xl">
+        <section className="mt-24 p-12 bg-forest-green dark:bg-card-bg rounded-[3rem] text-white dark:text-gray-200 text-center relative overflow-hidden shadow-2xl transition-colors">
           <div className="absolute top-0 right-0 w-64 h-64 bg-white/5 rounded-full -translate-y-1/2 translate-x-1/2"></div>
           <div className="relative z-10 max-w-3xl mx-auto">
             <h3 className="text-3xl font-serif mb-6 text-vedic-gold">
               The Magic of Prasadam
             </h3>
-            <p className="text-white/80 text-lg leading-relaxed mb-8">
+            <p className="text-white/80 dark:text-gray-300 text-lg leading-relaxed mb-8">
               In the Bhakti tradition, food cooked with love and offered to Krishna is known as **Prasadam**—literally "The Mercy of the Lord." It is believed that such food nourishes not only the body but cleanses the soul of past karma and awakens our natural spiritual consciousness.
             </p>
             <div className="flex justify-center gap-4">

@@ -1,13 +1,13 @@
 export default function Hero() {
   return (
-    <section className="relative h-[80vh] min-h-[500px] flex items-center overflow-hidden">
+    <section className="relative h-[80vh] min-h-[500px] flex items-end pb-16 md:pb-0 md:items-center overflow-hidden">
       {/* Hero Background Image */}
       <img
         alt="Beautifully offered Krishna Prasadam"
         className="absolute inset-0 w-full h-full object-cover"
         src="https://lh3.googleusercontent.com/aida-public/AB6AXuBj1U4xMahrcWRhkllIEzOIRULramCJyJnZSXYl0lFYMrr4wifiQ6rpQcgmIlYYY0vsW7PFCFKRESlDGcb_2H9hEhGEHKHIOzPsuny1ondKyAhD_xvhXPpbnYtpyX60b-RwjRDPn30niMsjvA5n1I95t3d6fbfSCdk36xotS4qJ5bgJxOsjRyTB5AfeqWACySRJ0wP1Oe_g2c4Nr0r3DqiQfOfijCxJZT3u7rz-Wb58ofEdz2fZViOcHyouSzMzu0pIAohEyBqSFOY"
       />
-      <div className="absolute inset-0 hero-gradient"></div>
+      <div className="absolute inset-0 hero-gradient dark:opacity-90 dark:bg-black/40"></div>
       <div className="container mx-auto px-6 relative z-10 text-white">
         <div className="max-w-2xl">
           <span className="inline-block px-4 py-1 bg-deep-saffron text-xs font-bold uppercase tracking-widest mb-4">

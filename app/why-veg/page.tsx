@@ -24,7 +24,7 @@ export default async function WhyVegPage() {
   }).sort((a, b) => (a.order) - (b.order));
 
   return (
-    <div className="bg-white min-h-screen text-gray-800 font-sans">
+    <div className="bg-spiritual-cream dark:bg-gray-950 min-h-screen text-gray-800 dark:text-gray-200 font-sans transition-colors">
       <Header />
       
       <main className="container mx-auto px-6 py-16">
@@ -36,7 +36,7 @@ export default async function WhyVegPage() {
             Why Veg Only? 
           </h1>
           <div className="w-24 h-1 bg-forest-green mx-auto mb-8"></div>
-          <p className="text-gray-600 max-w-2xl mx-auto text-lg leading-relaxed">
+          <p className="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto text-lg leading-relaxed">
             Addressing the 30 most common questions and challenges regarding a vegetarian lifestyle through science, scripture, and morality.
           </p>
         </header>
@@ -46,18 +46,18 @@ export default async function WhyVegPage() {
             <Link 
               key={`${t.id}-${t.order}`} 
               href={`/why-veg/${t.order}`}
-              className="bg-spiritual-cream p-8 rounded-[2rem] border border-transparent hover:border-forest-green/20 hover:shadow-2xl transition-all group block"
+              className="bg-card-bg p-8 rounded-[2rem] border border-transparent dark:border-gray-800 hover:border-forest-green/20 hover:shadow-2xl transition-all group block"
             >
-              <div className="w-10 h-10 rounded-full bg-white flex items-center justify-center text-forest-green font-serif font-bold mb-6 group-hover:bg-forest-green group-hover:text-white transition-colors">
+              <div className="w-10 h-10 rounded-full bg-spiritual-cream dark:bg-gray-800 flex items-center justify-center text-forest-green font-serif font-bold mb-6 group-hover:bg-forest-green group-hover:text-white transition-colors">
                 {t.order}
               </div>
-              <h2 className="text-xl font-bold text-forest-green mb-3 group-hover:text-deep-saffron transition-colors">
+              <h2 className="text-xl font-bold text-forest-green dark:text-forest-green mb-3 group-hover:text-deep-saffron transition-colors">
                 {t.title}
               </h2>
-              <p className="text-gray-500 leading-relaxed text-sm">
+              <p className="text-gray-500 dark:text-gray-400 leading-relaxed text-sm">
                 {t.description}
               </p>
-              <div className="mt-6 flex items-center text-xs font-bold text-forest-green uppercase tracking-widest opacity-60 group-hover:opacity-100 group-hover:translate-x-2 transition-all">
+              <div className="mt-6 flex items-center text-xs font-bold text-forest-green dark:text-forest-green uppercase tracking-widest opacity-60 group-hover:opacity-100 group-hover:translate-x-2 transition-all">
                 Discovery Article <span className="ml-2">→</span>
               </div>
             </Link>

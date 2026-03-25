@@ -9,6 +9,9 @@
   --forest-green: #2D5A27;
   --deep-saffron: #FF9933;
   --spiritual-cream: #FFFDF5;
+  --card-bg: #ffffff;
+  --text-primary: #1f2937;
+  --text-muted: #6b7280; /* gray-500 */
 }
 
 @theme inline {
@@ -17,9 +20,24 @@
   --color-forest-green: var(--forest-green);
   --color-deep-saffron: var(--deep-saffron);
   --color-spiritual-cream: var(--spiritual-cream);
+  --color-card-bg: var(--card-bg);
+  --color-text-primary: var(--text-primary);
+  --color-text-muted: var(--text-muted);
 
   --font-serif: "Georgia", serif;
   --font-sans: "Inter", sans-serif;
+}
+
+.dark {
+  --background: #0f1710; /* deep-forest-black */
+  --foreground: #f3f4f6; /* gray-100 */
+  --spiritual-cream: #1a241b; /* dark-sattvik-green */
+  --forest-green: #4ade80; /* lighter-green-for-dark */
+  --deep-saffron: #fb923c; /* lighter-saffron-for-dark */
+  --vedic-gold: #fbbf24;
+  --card-bg: #121815; /* dark-card-green */
+  --text-primary: #f9fafb; /* gray-50 - nearly white for max contrast */
+  --text-muted: #9ca3af; /* gray-400 - readable muted text */
 }
 
 @utility scripture-quote {
@@ -63,4 +81,25 @@ body {
   background: var(--spiritual-cream);
   color: var(--foreground);
   font-family: var(--font-sans);
+}
+
+/* Global Prose Overrides for Dark Mode */
+.dark .prose {
+  --tw-prose-body: var(--text-primary) !important;
+  --tw-prose-invert-body: var(--text-primary) !important;
+  --tw-prose-headings: var(--forest-green) !important;
+  --tw-prose-invert-headings: var(--forest-green) !important;
+  --tw-prose-lead: var(--text-muted) !important;
+  --tw-prose-links: var(--deep-saffron) !important;
+  --tw-prose-bold: var(--text-primary) !important;
+  --tw-prose-counters: var(--deep-saffron) !important;
+  --tw-prose-bullets: var(--deep-saffron) !important;
+  --tw-prose-quotes: var(--text-primary) !important;
+  --tw-prose-quote-borders: var(--deep-saffron) !important;
+  --tw-prose-captions: var(--text-muted) !important;
+  --tw-prose-code: var(--text-primary) !important;
+  --tw-prose-pre-code: var(--text-primary) !important;
+  --tw-prose-pre-bg: var(--background) !important;
+  --tw-prose-th-borders: var(--forest-green) !important;
+  --tw-prose-td-borders: var(--forest-green) !important;
 }

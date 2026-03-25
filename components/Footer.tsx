@@ -1,6 +1,6 @@
 export default function Footer() {
   return (
-    <footer className="bg-gray-900 text-white py-16">
+    <footer className="bg-gray-950 text-white py-16 border-t border-gray-900 transition-colors">
       <div className="container mx-auto px-6">
         <div className="grid md:grid-cols-4 gap-12 mb-12">
           <div className="col-span-1 md:col-span-2">
@@ -10,7 +10,7 @@ export default function Footer() {
               </div>
               <span className="text-xl font-serif font-bold text-white">Ananda Rasa</span>
             </div>
-            <p className="text-gray-400 max-w-sm mb-6">
+            <p className="text-muted max-w-sm mb-6">
               Dedicated to sharing the joy of Krishna consciousness through the universal language
               of sanctified food.
             </p>
@@ -37,7 +37,7 @@ export default function Footer() {
           </div>
           <div>
             <h4 className="font-bold mb-6 border-b border-gray-800 pb-2">Quick Links</h4>
-            <ul className="space-y-4 text-gray-400">
+            <ul className="space-y-4 text-muted">
               <li>
                 <a className="hover:text-vedic-gold transition-colors" href="#">
                   Recipe Index
@@ -62,7 +62,7 @@ export default function Footer() {
           </div>
           <div>
             <h4 className="font-bold mb-6 border-b border-gray-800 pb-2">Newsletter</h4>
-            <p className="text-sm text-gray-400 mb-4">
+            <p className="text-sm text-muted mb-4">
               Receive weekly spiritual recipes and inspiration.
             </p>
             <form className="flex flex-col space-y-2">
@@ -77,7 +77,7 @@ export default function Footer() {
             </form>
           </div>
         </div>
-        <div className="border-t border-gray-800 pt-8 text-center text-gray-500 text-sm">
+        <div className="border-t border-gray-800 pt-8 text-center text-muted text-sm">
           <p>© 2023 Ananda Rasa - Hare Krishna Cooking. Serve with Love.</p>
         </div>
       </div>
