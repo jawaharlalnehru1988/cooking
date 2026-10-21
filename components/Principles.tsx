@@ -1,9 +1,33 @@
 import Link from "next/link";
 
+const principles = [
+  {
+    id: 1,
+    title: "Ahimsa (Non-Violence)",
+    icon: "🌿",
+    description:
+      "Purely vegetarian ingredients sourced with compassion, excluding meat, fish, and eggs.",
+  },
+  {
+    id: 3,
+    title: "Consciousness",
+    icon: "✨",
+    description:
+      "The state of mind while cooking affects the food. We cook with love, mindfulness, and devotion.",
+  },
+  {
+    id: 4,
+    title: "Prasadam",
+    icon: "🙏",
+    description:
+      "Every dish is offered to the Divine first, transforming simple nourishment into spiritual mercy.",
+  },
+];
+
 export default function Principles() {
   return (
     <section className="py-24 bg-spiritual-cream dark:bg-gray-950 transition-colors" id="principles">
-      <div className="container mx-auto px-6">
+      <div className="container mx-auto px-6 max-w-5xl">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-serif text-forest-green dark:text-forest-green mb-4">
             The Principles of Sattvic Cooking
@@ -14,44 +38,30 @@ export default function Principles() {
             fundamental pillars of Vedic wisdom.
           </p>
         </div>
-        <div className="grid md:grid-cols-3 gap-12">
-          <Link href="/principles/1" className="block group">
-            <div className="sattvic-card text-center p-8 bg-card-bg rounded-xl border border-gray-100 dark:border-gray-800 transition-all hover:shadow-xl hover:border-deep-saffron/30 h-full">
-              <div className="w-16 h-16 bg-spiritual-cream dark:bg-gray-800 rounded-full flex items-center justify-center mx-auto mb-6 shadow-sm group-hover:scale-110 transition-transform">
-                <span className="text-3xl">🌿</span>
-              </div>
-              <h3 className="text-xl font-bold mb-4 text-forest-green dark:text-forest-green group-hover:text-deep-saffron transition-colors">Ahimsa (Non-Violence)</h3>
-              <p className="text-muted leading-relaxed">
-                Purely vegetarian ingredients sourced with compassion, excluding meat, fish, and eggs.
-              </p>
-            </div>
-          </Link>
 
-          <Link href="/principles/3" className="block group">
-            <div className="sattvic-card text-center p-8 bg-card-bg rounded-xl border border-gray-100 dark:border-gray-800 transition-all hover:shadow-xl hover:border-deep-saffron/30 h-full">
-              <div className="w-16 h-16 bg-spiritual-cream dark:bg-gray-800 rounded-full flex items-center justify-center mx-auto mb-6 shadow-sm group-hover:scale-110 transition-transform">
-                <span className="text-3xl">✨</span>
+        <div className="flex flex-col gap-5">
+          {principles.map((principle) => (
+            <Link key={principle.id} href={`/principles/${principle.id}`} className="block group">
+              <div className="sattvic-card p-6 md:p-7 bg-card-bg rounded-2xl border border-gray-100 dark:border-gray-800 transition-all duration-300 hover:shadow-xl hover:border-deep-saffron/40 flex flex-row items-center gap-5 md:gap-6">
+                <div className="w-14 h-14 md:w-16 md:h-16 shrink-0 rounded-2xl bg-spiritual-cream dark:bg-gray-800/80 border border-gray-100 dark:border-gray-700/50 flex items-center justify-center shadow-xs group-hover:scale-105 transition-transform text-2xl md:text-3xl">
+                  <span>{principle.icon}</span>
+                </div>
+                <div className="flex-1 min-w-0">
+                  <div className="flex items-center justify-between gap-3 mb-1.5">
+                    <h3 className="text-lg md:text-xl font-bold font-serif text-forest-green dark:text-forest-green group-hover:text-deep-saffron transition-colors">
+                      {principle.title}
+                    </h3>
+                    <span className="text-deep-saffron text-sm font-semibold shrink-0 flex items-center gap-1 group-hover:translate-x-1 transition-transform">
+                      Explore <span aria-hidden="true">&rarr;</span>
+                    </span>
+                  </div>
+                  <p className="text-muted leading-relaxed text-sm md:text-base">
+                    {principle.description}
+                  </p>
+                </div>
               </div>
-              <h3 className="text-xl font-bold mb-4 text-forest-green dark:text-forest-green group-hover:text-deep-saffron transition-colors">Consciousness</h3>
-              <p className="text-muted leading-relaxed">
-                The state of mind while cooking affects the food. We cook with love, mindfulness, and
-                devotion.
-              </p>
-            </div>
-          </Link>
-
-          <Link href="/principles/4" className="block group">
-            <div className="sattvic-card text-center p-8 bg-card-bg rounded-xl border border-gray-100 dark:border-gray-800 transition-all hover:shadow-xl hover:border-deep-saffron/30 h-full">
-              <div className="w-16 h-16 bg-spiritual-cream dark:bg-gray-800 rounded-full flex items-center justify-center mx-auto mb-6 shadow-sm group-hover:scale-110 transition-transform">
-                <span className="text-3xl">🙏</span>
-              </div>
-              <h3 className="text-xl font-bold mb-4 text-forest-green dark:text-forest-green group-hover:text-deep-saffron transition-colors">Prasadam</h3>
-              <p className="text-muted leading-relaxed">
-                Every dish is offered to the Divine first, transforming simple nourishment into
-                spiritual mercy.
-              </p>
-            </div>
-          </Link>
+            </Link>
+          ))}
         </div>
       </div>
     </section>
