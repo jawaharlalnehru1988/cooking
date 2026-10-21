@@ -101,10 +101,11 @@ export default async function WhyNoOnionGarlicDetailPage({
               prose-headings:font-serif prose-headings:text-forest-green dark:prose-headings:text-emerald-400
               prose-h1:text-center prose-h1:mb-10 prose-h1:text-3xl
               prose-h3:text-xl prose-h3:mt-8 prose-h3:mb-3 prose-h3:border-b prose-h3:border-forest-green/10 prose-h3:pb-2
+              prose-h4:text-lg prose-h4:mt-6 prose-h4:mb-2 prose-h4:font-serif prose-h4:text-deep-saffron
               prose-strong:text-forest-green dark:prose-strong:text-emerald-300 prose-strong:font-bold
               prose-li:marker:text-deep-saffron
-              prose-blockquote:border-l-4 prose-blockquote:border-deep-saffron prose-blockquote:bg-deep-saffron/5 prose-blockquote:p-4 prose-blockquote:rounded-r-xl prose-blockquote:italic
-              prose-pre:bg-gray-900 prose-pre:border prose-pre:border-gray-800
+              prose-blockquote:border-l-4 prose-blockquote:border-deep-saffron prose-blockquote:bg-deep-saffron/5 prose-blockquote:p-6 prose-blockquote:rounded-r-2xl prose-blockquote:italic prose-blockquote:my-6
+              prose-pre:bg-amber-50/70 dark:prose-pre:bg-gray-900/90 prose-pre:border prose-pre:border-amber-200 dark:prose-pre:border-amber-900/50 prose-pre:rounded-2xl prose-pre:p-6 prose-pre:text-amber-950 dark:prose-pre:text-amber-100 prose-pre:font-serif prose-pre:text-lg prose-pre:leading-loose prose-pre:shadow-sm prose-pre:whitespace-pre-wrap
               leading-relaxed"
             >
               <ReactMarkdown>{currentArticle.article}</ReactMarkdown>
