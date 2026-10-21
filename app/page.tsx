@@ -5,6 +5,7 @@ import Principles from "@/components/Principles";
 import CategorySection from "@/components/CategorySection";
 import FeaturedRecipes from "@/components/FeaturedRecipes";
 import IngredientsSpotlight from "@/components/IngredientsSpotlight";
+import PhilosophySpotlight from "@/components/PhilosophySpotlight";
 import Footer from "@/components/Footer";
 
 export default function Home() {
@@ -15,6 +16,7 @@ export default function Home() {
         <Hero />
         <DailyInspiration />
         <Principles />
+        <PhilosophySpotlight />
         <CategorySection />
         <FeaturedRecipes />
         <IngredientsSpotlight />

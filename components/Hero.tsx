@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function Hero() {
   return (
     <section className="relative h-[80vh] min-h-[500px] flex items-end pb-16 md:pb-0 md:items-center overflow-hidden">
@@ -20,19 +22,19 @@ export default function Hero() {
             Discover the ancient art of Sattvic cooking. Transform your kitchen into a sacred
             space and every meal into a divine offering.
           </p>
-          <div className="flex space-x-4">
-            <a
+          <div className="flex flex-wrap gap-4">
+            <Link
               className="bg-deep-saffron hover:bg-orange-600 px-8 py-3 rounded-md font-bold transition-all inline-block"
-              href="#"
+              href="/recipes"
             >
               Explore Recipes
-            </a>
-            <a
+            </Link>
+            <Link
               className="bg-white/10 hover:bg-white/20 border border-white/30 backdrop-blur-sm px-8 py-3 rounded-md font-bold transition-all inline-block"
-              href="#"
+              href="/why-no-onion-garlic"
             >
-              Learn Philosophy
-            </a>
+              Why No Onion &amp; Garlic?
+            </Link>
           </div>
         </div>
       </div>

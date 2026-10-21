@@ -39,23 +39,28 @@ export default function Footer() {
             <h4 className="font-bold mb-6 border-b border-gray-800 pb-2">Quick Links</h4>
             <ul className="space-y-4 text-muted">
               <li>
-                <a className="hover:text-vedic-gold transition-colors" href="#">
+                <a className="hover:text-vedic-gold transition-colors" href="/recipes">
                   Recipe Index
                 </a>
               </li>
               <li>
-                <a className="hover:text-vedic-gold transition-colors" href="#">
-                  Vedic Philosophy
+                <a className="hover:text-vedic-gold transition-colors" href="/why-veg">
+                  Why Veg Only?
                 </a>
               </li>
               <li>
-                <a className="hover:text-vedic-gold transition-colors" href="#">
-                  Kitchen Essentials
+                <a className="hover:text-vedic-gold transition-colors" href="/why-no-onion-garlic">
+                  Why No Onion &amp; Garlic?
                 </a>
               </li>
               <li>
-                <a className="hover:text-vedic-gold transition-colors" href="#">
-                  Community Blog
+                <a className="hover:text-vedic-gold transition-colors" href="/principles">
+                  Cooking Principles
+                </a>
+              </li>
+              <li>
+                <a className="hover:text-vedic-gold transition-colors" href="/ingredients">
+                  Sattvik Ingredients
                 </a>
               </li>
             </ul>
