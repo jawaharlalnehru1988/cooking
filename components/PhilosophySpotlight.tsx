@@ -17,8 +17,33 @@ export default function PhilosophySpotlight() {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
-          {/* Card 1: Why No Onion & Garlic */}
+        <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+          {/* Card 1: Health Care of Devotees */}
+          <Link
+            href="/devotee-health"
+            className="group relative p-8 md:p-10 rounded-[2.5rem] bg-card-bg border border-gray-100 dark:border-gray-800 hover:border-amber-500/50 hover:shadow-2xl transition-all flex flex-col justify-between overflow-hidden"
+          >
+            <div className="absolute top-0 right-0 w-36 h-36 bg-amber-500/10 rounded-full translate-x-12 -translate-y-12 blur-xl"></div>
+            <div>
+              <div className="flex items-center justify-between mb-6">
+                <span className="px-3.5 py-1 bg-amber-500/10 text-amber-700 dark:text-amber-300 rounded-full text-xs font-bold uppercase tracking-wider">
+                  30 Inquiries
+                </span>
+                <span className="text-3xl">🧘‍♂️</span>
+              </div>
+              <h3 className="text-2xl md:text-3xl font-serif font-bold text-forest-green dark:text-emerald-400 group-hover:text-deep-saffron transition-colors mb-4">
+                Health Care of Devotees
+              </h3>
+              <p className="text-muted text-sm leading-relaxed mb-6">
+                Lord Krishna's Bhagavad-gita formulas (6.16-17, 17.8-10, 15.14), Srila Prabhupada's health axioms, Ayurvedic Ahara-Vijnana, 50-25-25 stomach rule, circadian sleep, ergonomics, and natural remedies.
+              </p>
+            </div>
+            <div className="flex items-center text-xs font-bold text-deep-saffron uppercase tracking-widest group-hover:translate-x-2 transition-transform">
+              Explore 30 Articles <span className="ml-2 font-serif text-base">→</span>
+            </div>
+          </Link>
+
+          {/* Card 2: Why No Onion & Garlic */}
           <Link
             href="/why-no-onion-garlic"
             className="group relative p-8 md:p-10 rounded-[2.5rem] bg-card-bg border border-gray-100 dark:border-gray-800 hover:border-deep-saffron/40 hover:shadow-2xl transition-all flex flex-col justify-between overflow-hidden"
@@ -43,7 +68,7 @@ export default function PhilosophySpotlight() {
             </div>
           </Link>
 
-          {/* Card 2: Why Veg Only? */}
+          {/* Card 3: Why Veg Only? */}
           <Link
             href="/why-veg"
             className="group relative p-8 md:p-10 rounded-[2.5rem] bg-card-bg border border-gray-100 dark:border-gray-800 hover:border-forest-green/40 hover:shadow-2xl transition-all flex flex-col justify-between overflow-hidden"

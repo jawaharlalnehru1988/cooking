@@ -19,6 +19,7 @@ export default function Header() {
   const navLinks = [
     { name: "Home", href: "/" },
     { name: "Recipes", href: "/recipes" },
+    { name: "Devotee Health", href: "/devotee-health" },
     { name: "Principles", href: "/principles" },
     { name: "Why Veg?", href: "/why-veg" },
     { name: "No Onion & Garlic", href: "/why-no-onion-garlic" },
