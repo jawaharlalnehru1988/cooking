@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useTheme } from "@/components/ThemeProvider";
+import LanguageSwitcher from "@/components/LanguageSwitcher";
 
 interface NavCategory {
   heading: string;
@@ -150,8 +151,11 @@ export default function Header() {
             </div>
           </Link>
 
-          {/* Clean Right Actions: Theme Toggle + Master Hamburger Button */}
-          <div className="flex items-center space-x-3">
+          {/* Clean Right Actions: Language Switcher + Theme Toggle + Master Hamburger Button */}
+          <div className="flex items-center space-x-2.5 sm:space-x-3">
+            {/* Language Switcher */}
+            <LanguageSwitcher />
+
             {/* Theme Toggle */}
             <button
               onClick={toggleTheme}
